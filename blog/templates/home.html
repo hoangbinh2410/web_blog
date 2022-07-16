@@ -1,0 +1,13 @@
+{% extends 'narbarview.html' %}
+{% block content %}
+
+<h1>Danh sách blog</h1>
+<ul>
+    {% for post in object_list %}
+         <li>
+         <a href="{% url 'detail-blog' post.pk %}">{{ post.title }}</a>
+            - {{ post.author.first_name }} {{ post.author.last_name }} <br/>
+         </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,10 @@
+{%  extends 'narbarview.html' %}
+{% block content %}
+
+    <h1> Blog Mới</h1>
+    <form method="POST">
+            {% csrf_token %}
+    {{ form.as_p }}
+        <button> Thêm </button>
+    </form>
+{%  endblock %}

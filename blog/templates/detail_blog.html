@@ -1,0 +1,14 @@
+{% extends 'narbarview.html' %}
+{% block content %}
+
+<h1>{{ post.title }}</h1>
+
+<small> By: {{ post.author.fist_name }} {{ post.author.last_name }}</small>
+<hr>
+<br/>
+{{ post.body }}
+
+<br/>
+<a href="{% url 'home' %}"> Back </a>
+
+{% endblock %}
